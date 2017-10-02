@@ -21,24 +21,33 @@
 
 	div {
 		height: 100%;
-		border: 5px;
+		border: 0px;
 		border-color: black;
 	}
 
 	.pbody{
 		font-family: 'Source Serif Pro', serif;
-		background: repeating-linear-gradient(
+		background-image: url("bcg (3).jpg");
+		background-attachment: fixed;
+    	background-position: center; 
+
+		/* background: repeating-linear-gradient(
 		                                      0deg,
 		                                      #babbbc,
 		                                      #babbbc 10px,
 		                                      #e8e8e8 10px,
 		                                      #e8e8e8 20px
-		                                      );
-		border: 5px;
+		                                      ); */
+		border: 0px;
+	}
+
+	:root{
+		--boder_space:3px;
 	}
 
 	.beef { 
-		width:25%;
+		width:calc(25% - var(--boder_space));
+		margin-right: var(--boder_space);
 		background: #F69B88 ; 
 		float:left;
 
@@ -48,7 +57,8 @@
 	.beef tr:nth-child(even){background-color: #f39885}
 
 	.chicken { 
-		width:25%; 
+		width:calc(25% - var(--boder_space)); 
+		margin-right: var(--boder_space);
 		background: #F0D3A7 ; 
 		float:left; 
 	}
@@ -56,7 +66,8 @@
 	.chicken tr:nth-child(even){background-color: #eacea2}
 
 	.drinks { 
-		width:25%; 
+		width:calc(25% - var(--boder_space)); 
+		margin-right: var(--boder_space);
 		background: #aed6f1 ; 
 		float:left; 
 	}
@@ -90,7 +101,7 @@
 </head>
 <body class="pbody">
 	<center>
-		<div style="border: 2px solid #888888;">
+		<div style="border: 0px solid #888888;">
 		<div class="beef">
 			<h2>Beef</h2>
 			<table>
