@@ -8,93 +8,134 @@
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet"> 
 
+	<script type="text/javascript">
+		var color="#2E2E2E";
+		var border_space="3px";
+	</script>
+
 	<style>
-		h1{
-			text-align:center; 
-			color: black; 
-			font-size: 36; 
-			font-family: 'Pacifico', cursive;
-		}
+	h1{
+		text-align:center; 
+		color: black; 
+		font-size: 36; 
+		font-family: 'Pacifico', cursive;
+	}
 
-		h2{
-			font-weight: bold;
-		}
+	h2{
+		font-weight: bold;
+		font-size: 28;
+	}
 
-		div {
-			height: 100%;
-			border: 0px;
-			border-color: black;
-		}
+	div {
+		height: 100%;
+		border: 0px;
+		border-color: black;			
+	}
 
-		.pbody{
-			font-family: 'Source Serif Pro', serif;
-			background-image: url("bcg (3).jpg");
-			background-attachment: fixed;
-			background-position: center; 
-			background-size: cover;
-			border: 0px;
-		}
+	.pbody{
+		font-family: 'Source Serif Pro', serif;
+		background-image: url("bcg (3).jpg");
+		background-attachment: fixed;
+		background-position: center; 
+		background-size: cover;
+		border: 0px;
+	}
 
-		/*Variables used in many places*/
-		:root{
-			--boder_space:3px;
-			--var_opac:0.875;
-		}
+	/*Variables used in many places*/
+	:root{
+		--boder_space:3px;
+		--var_opac:0.875;
+		--beef_color:;
+		--chicken_color:;
+		--drinks_color:;
+		--snacks_color:;
+	}
 
+	.beef { 
+		width:calc(25% - var(--boder_space));
+		margin-right: var(--boder_space);
+		background: #F69B88 ; 
+		float:left;
+		opacity: var(--var_opac);
+	}
+	.beef tr:nth-child(odd){background-color: #fba08d}
+	.beef tr:nth-child(even){background-color: #f39885}
+
+	.chicken { 
+		width:calc(25% - var(--boder_space)); 
+		margin-right: var(--boder_space);
+		background: #F0D3A7 ; 
+		float:left; 
+		opacity: var(--var_opac);
+	}
+	.chicken tr:nth-child(odd){background-color: #f5d8ac}
+	.chicken tr:nth-child(even){background-color: #eacea2}
+
+	.drinks { 
+		width:calc(25% - var(--boder_space)); 
+		margin-right: var(--boder_space);
+		background: #aed6f1 ; 
+		float:left; 
+		opacity: var(--var_opac);
+	}
+	.drinks tr:nth-child(odd){background-color: #b3dbf6}
+	.drinks tr:nth-child(even){background-color: #a9d0eb}
+
+	.snacks { 
+		width:25%; 
+		background: #FAC5C4 ;
+		float:right;
+		opacity: var(--var_opac);
+	}
+	.snacks tr:nth-child(odd){background-color: #ffcac9}
+	.snacks tr:nth-child(even){background-color: #f5c0bf}
+
+	@media (max-width: 1080px) {
+		/* CSS that should be displayed if width is equal to or less than 1080px goes here */
 		.beef { 
-			width:calc(25% - var(--boder_space));
+			width:calc(50% - var(--boder_space));
 			margin-right: var(--boder_space);
+			margin-bottom: var(--boder_space);
 			background: #F69B88 ; 
 			float:left;
 			opacity: var(--var_opac);
-
-
 		}
-		.beef tr:nth-child(odd){background-color: #fba08d}
-		.beef tr:nth-child(even){background-color: #f39885}
-
 		.chicken { 
-			width:calc(25% - var(--boder_space)); 
-			margin-right: var(--boder_space);
+			width:calc(50% - var(--boder_space));
+			margin-right: 0px;
+			margin-bottom: var(--boder_space);
 			background: #F0D3A7 ; 
-			float:left; 
+			float:right; 
 			opacity: var(--var_opac);
 		}
-		.chicken tr:nth-child(odd){background-color: #f5d8ac}
-		.chicken tr:nth-child(even){background-color: #eacea2}
-
 		.drinks { 
-			width:calc(25% - var(--boder_space)); 
-			margin-right: var(--boder_space);
+			width:calc(50% - var(--boder_space)); 
+			margin-right: - var(--boder_space);
 			background: #aed6f1 ; 
 			float:left; 
 			opacity: var(--var_opac);
 		}
-		.drinks tr:nth-child(odd){background-color: #b3dbf6}
-		.drinks tr:nth-child(even){background-color: #a9d0eb}
-
 		.snacks { 
-			width:25%; 
+			width:calc(50% - var(--boder_space)); 
 			background: #FAC5C4 ;
 			float:right;
 			opacity: var(--var_opac);
 		}
-		.snacks tr:nth-child(odd){background-color: #ffcac9}
-		.snacks tr:nth-child(even){background-color: #f5c0bf}
+	}
 
-		table {
-			border-collapse: collapse;
-			border-spacing: 0;
-			width: 100%;
-			border: 0px solid #ddd;
-		}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		border: 0px solid #ddd;
+	}
 
-		th, td {
-			border: none;
-			text-align: left;
-			padding: 8px;
-		}
-	</style>
+	th, td {
+		border: none;
+		text-align: left;
+		padding: 8px;
+	}
+</style>
 </head>
 
 <body class="pbody">
