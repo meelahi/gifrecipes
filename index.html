@@ -3,97 +3,148 @@
 
 <head>
 	<title>Gif Recipe</title>
+	<link rel="icon" href="favicon2.png">
 	<h1>Gif Recipe</h1>
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet"> 
 
+	<script type="text/javascript">
+		var color="#2E2E2E";
+		var border_space="3px";
+	</script>
+
 	<style>
-		h1{
-			text-align:center; 
-			color: black; 
-			font-size: 36; 
-			font-family: 'Pacifico', cursive;
-		}
+	h1{
+		text-align:center; 
+		color: black; 
+		font-size: 36; 
+		font-family: 'Pacifico', cursive;
+	}
 
-		h2{
-			font-weight: bold;
-		}
+	h2{
+		font-weight: bold;
+		font-size: 28;
+	}
 
-		div {
-			height: 100%;
-			border: 0px;
-			border-color: black;
-		}
+	div {
+		height: 100%;
+		border: 0px;
+		border-color: black;			
+	}
 
-		.pbody{
-			font-family: 'Source Serif Pro', serif;
-			background-image: url("bcg (3).jpg");
-			background-attachment: fixed;
-			background-position: center; 
-			background-size: cover;
-			border: 0px;
-		}
+	.pbody{
+		font-family: 'Source Serif Pro', serif;
+		background-image: url("bcg (3).jpg");
+		background-attachment: fixed;
+		background-position: center; 
+		background-size: cover;
+		border: 0px;
+	}
 
-		/*Variables used in many places*/
-		:root{
-			--boder_space:3px;
-			--var_opac:0.875;
-		}
+	/*Variables used in many places*/
+	:root{
+		--boder_space:3px;
+		--var_opac:0.875;
+		--beef_color:;
+		--chicken_color:;
+		--drinks_color:;
+		--snacks_color:;
+	}
 
+	.beef { 
+		width:calc(25% - var(--boder_space));
+		height: auto;
+		margin-right: var(--boder_space);
+		background: #F69B88 ; 
+		float:left;
+		opacity: var(--var_opac);
+	}
+	.beef tr:nth-child(odd){background-color: #fba08d}
+	.beef tr:nth-child(even){background-color: #f39885}
+
+	.chicken { 
+		width:calc(25% - var(--boder_space)); 
+		height: auto;
+		margin-right: var(--boder_space);
+		background: #F0D3A7 ; 
+		float:left; 
+		opacity: var(--var_opac);
+	}
+	.chicken tr:nth-child(odd){background-color: #f5d8ac}
+	.chicken tr:nth-child(even){background-color: #eacea2}
+
+	.drinks { 
+		width:calc(25% - var(--boder_space)); 
+		height: auto;
+		margin-right: var(--boder_space);
+		background: #aed6f1 ; 
+		float:left; 
+		opacity: var(--var_opac);
+	}
+	.drinks tr:nth-child(odd){background-color: #b3dbf6}
+	.drinks tr:nth-child(even){background-color: #a9d0eb}
+
+	.snacks { 
+		width:25%; 
+		height: auto;
+		background: #FAC5C4 ;
+		float:right;
+		opacity: var(--var_opac);
+	}
+	.snacks tr:nth-child(odd){background-color: #ffcac9}
+	.snacks tr:nth-child(even){background-color: #f5c0bf}
+
+	@media (max-width: 1080px) {
+		/* CSS that should be displayed if width is equal to or less than 1080px goes here */
 		.beef { 
-			width:calc(25% - var(--boder_space));
+			width:calc(50% - var(--boder_space));
+			height: auto;
 			margin-right: var(--boder_space);
+			margin-bottom: var(--boder_space);
 			background: #F69B88 ; 
 			float:left;
 			opacity: var(--var_opac);
-
-
 		}
-		.beef tr:nth-child(odd){background-color: #fba08d}
-		.beef tr:nth-child(even){background-color: #f39885}
-
 		.chicken { 
-			width:calc(25% - var(--boder_space)); 
-			margin-right: var(--boder_space);
+			width:calc(50% - var(--boder_space));
+			height: auto;
+			margin-right: 0px;
+			margin-bottom: var(--boder_space);
 			background: #F0D3A7 ; 
-			float:left; 
+			float:right; 
 			opacity: var(--var_opac);
 		}
-		.chicken tr:nth-child(odd){background-color: #f5d8ac}
-		.chicken tr:nth-child(even){background-color: #eacea2}
-
-		.drinks { 
-			width:calc(25% - var(--boder_space)); 
-			margin-right: var(--boder_space);
-			background: #aed6f1 ; 
-			float:left; 
-			opacity: var(--var_opac);
-		}
-		.drinks tr:nth-child(odd){background-color: #b3dbf6}
-		.drinks tr:nth-child(even){background-color: #a9d0eb}
-
 		.snacks { 
-			width:25%; 
-			background: #FAC5C4 ;
+			width:calc(50% - var(--boder_space)); 
+			height: auto;
+			/*margin-right: var(--boder_space);*/
+			background:  #FAC5C4 ; 
+			float:left; 
+			opacity: var(--var_opac);
+		}
+		.drinks { 
+			width:calc(50% - var(--boder_space)); 
+			height: auto;
+			margin-right: - var(--boder_space);
+			background: #aed6f1;
 			float:right;
 			opacity: var(--var_opac);
 		}
-		.snacks tr:nth-child(odd){background-color: #ffcac9}
-		.snacks tr:nth-child(even){background-color: #f5c0bf}
+	}
 
-		table {
-			border-collapse: collapse;
-			border-spacing: 0;
-			width: 100%;
-			border: 0px solid #ddd;
-		}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		border: 0px solid #ddd;
+	}
 
-		th, td {
-			border: none;
-			text-align: left;
-			padding: 8px;
-		}
-	</style>
+	th, td {
+		border: none;
+		text-align: left;
+		padding: 8px;
+	}
+</style>
 </head>
 
 <body class="pbody">
@@ -108,6 +159,26 @@
 					<tr><td><a href="https://i.imgur.com/MAjKsQo.gifv">Braised Short Ribs</a></td></tr>
 					<tr><td><a href="http://i.imgur.com/4ECuwiu.gifv">Skillet Lasagna</a></td></tr>
 					<tr><td><a href="http://i.imgur.com/DIQWGLZ.gifv">Crispy Orange Beef Burrito</a></td></tr>
+					<tr><td><a href="https://gfycat.com/specificpracticalkatydid">Gyudon (Japanese Beef & Rice Bowl)</a></td></tr>
+					<tr><td><a href="https://gfycat.com/AmbitiousHandyHawk">Chili-Lime Flank Steak</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/QwlGSPs.gifv">Pressure Cooker Pot Roast</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/K0JaTJH.gifv">Korean-Style Ribs</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/DIQWGLZ.gifv">Crispy Orange Beef Burrito</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/f6nlVx6.gifv">Argentine Stuffed Flank Steak (Matambre)</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/mW0Y3jO.gifv">Giant BBQ Rib Sandwich (To Feed A Crowd)</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/iJEcL6a.gifv">Double Cheeseburger Bread Bowl</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/6Iit7iO.gifv">Sloppy Joe Sliders</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/ULMBCxd.gifv">Chimichurri Beef Roulade</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/AEd8bnY.gifv">French Dip Sliders</a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
 				</table>
 			</div>
 			<div class="chicken">
@@ -126,19 +197,28 @@
 					<tr><td><a href="https://gfycat.com/dopeygentlekid">Peri Peri Chicken</a></td></tr>
 					<tr><td><a href="https://i.imgur.com/59TNGiw.gifv">Jalapeno Honeyed Chicken</a></td></tr>
 					<tr><td><a href="https://gfycat.com/AccuratePeacefulCopperhead">Crispy Chicken Kiev</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/w0XeHG1.gifv">Simple Roast Chicken</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/5NapKlm.gifv">Thai Chicken Lettuce Wraps</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/mcwtNVo.gifv">Cajun Chicken and Rice</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/0VicbsO.gifv">Mini Chicken and Waffle Sliders</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/hDKhMc7.gifv">Slow Cooker Honey Garlic Chicken</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/sP4zQrQ.gifv">Crispy Orange Chicken Sandwich</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/6hLUmMe.gifv">Secret 11 Herbs and Spices Fried Chicken</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/7iAo5BJ.gifv">General Tso's Chicken</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/iZDUlFR.gifv">Shortcut Chicken Shawarma</a></td></tr>
+					<tr><td><a href="https://gfycat.com/VainMildBarnswallow">BBQ Chicken Corn Dogs</a></td></tr>
+					<tr><td><a href="https://gfycat.com/TartCommonBooby">Orange Chicken</a></td></tr>
+					<tr><td><a href="https://i.redd.it/bxga6zngci1z.gif">Easy Chilli Chicken</a></td></tr>
+					<tr><td><a href="https://gfycat.com/SpectacularDamagedArgali">Chicken Florentine Meatballs with Tomato Sauce</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/LOGiP1z.gifv">Rotisserie Chicken, 4 Lunches</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/r19LVDr.gifv">Buttermilk-Fried Chicken Sandwich</a></td></tr>
+					<tr><td><a href="https://gfycat.com/VengefulAmusingKoala">Teriyaki Chicken Pineapple Boats</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/qZthCFh.gifv">Oven-Fried Buffalo Wings</a></td></tr>
+					<tr><td><a href="https://gfycat.com/SoreGleamingAlligatorsnappingturtle">Chicken Parm Lasagna</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/2SknFhX.gifv">Sliders Four Ways</a></td></tr>
 				</table>
 			</div>
-			<div class="drinks">
-				<h2>Drinks</h2>
-				<table>
-					<tr><td><a href="https://gfycat.com/BravePopularArmyworm">8 Frozen or Fruity Sangrias</a></td></tr>
-					<tr><td><a href="http://i.imgur.com/vKiBTgn.gifv">Spiked Milkshakes Four Ways</a></td></tr>
-					<tr><td><a href="https://gfycat.com/SizzlingIncomparableCowrie">How to make the perfect Moscow Mule</a></td></tr>
-					<tr><td><a href="http://i.imgur.com/0qpaaOC.gifv">Watermelon Keg</a></td></tr>
-					<tr><td><a href="http://i.imgur.com/acbqWKk.gifv">Mint Julep</a></td></tr>
-
-				</table>
-			</div>
+			
 			<div class="snacks">
 				<h2>Snacks</h2>
 				<table>
@@ -151,6 +231,40 @@
 					<tr><td><a href="https://gfycat.com/EmbarrassedPoshCavy">Homemade Snickers</a></td></tr>
 					<tr><td><a href="http://i.imgur.com/WUYNjQz.gifv">Mango Tart</a></td></tr>
 					<tr><td><a href="http://i.imgur.com/ZZ4jqFB.gifv">Summer Berry Buckle</a></td></tr>
+					<tr><td><a href="https://imgur.com/XMUHtM5">Chili Cheese Hasselback Potatoes</a></td></tr>
+					<tr><td><a href="https://gfycat.com/ClosedBelatedBirdofparadise">One-Pot Mac and Cheese</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/HClMQXX.gifv">The Best Cheesy Garlic Bread</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/gSL8F9F.gifv">Chocolate Chip Cookie Dough Bars</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/ZZbDi2v.gifv">Two-ingredient Flatbread</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/vNNqU2u.gifv">Homemade Falafel</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/j59fdrv.gifv">Cheese filled onion rings</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/ry4Yqns.gifvThe Best Fudgy Brownies Ever"></a></td></tr>
+					<tr><td><a href="http://i.imgur.com/OyJhCdv.gifv">Easy Homemade Chocolate Doughnuts</a></td></tr>
+					<tr><td><a href="https://i.redd.it/fr1h2rli720z.gif">Chicken spring rolls</a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+
+				</table>
+			</div>
+
+			<div class="drinks">
+				<h2>Drinks</h2>
+				<table>
+					<tr><td><a href="https://gfycat.com/BravePopularArmyworm">8 Frozen or Fruity Sangrias</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/vKiBTgn.gifv">Spiked Milkshakes Four Ways</a></td></tr>
+					<tr><td><a href="https://gfycat.com/SizzlingIncomparableCowrie">How to make the perfect Moscow Mule</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/0qpaaOC.gifv">Watermelon Keg</a></td></tr>
+					<tr><td><a href="http://i.imgur.com/acbqWKk.gifv">Mint Julep</a></td></tr>
+					<tr><td><a href="https://i.redd.it/gnicshrafc2z.gif">Mango Lassi</a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+					<tr><td><a href=""></a></td></tr>
+
 				</table>
 			</div>
 		</div>
