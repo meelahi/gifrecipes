@@ -1,3 +1,13 @@
+/*Variables used in many places*/
+:root{
+    --boder_space:1px;
+    --var_opac:0.875;
+    --beef_color:;
+    --chicken_color:;
+    --drinks_color:;
+    --snacks_color:;
+}
+
 h1{
     text-align:center; 
     color: black; 
@@ -8,10 +18,11 @@ h1{
 h2{
     font-weight: bold;
     font-size: 28;
+    display: none;
 }
 
 div {
-    height: 100%;
+    /*height: 100%;*/
     border: 0px;
     border-color: black;			
 }
@@ -22,65 +33,86 @@ div {
     background-attachment: fixed;
     background-position: center; 
     background-size: cover;
-    border: 0px;
+    width: 100%;
 }
 
-/*Variables used in many places*/
-:root{
-    --boder_space:3px;
-    --var_opac:0.875;
-    --beef_color:;
-    --chicken_color:;
-    --drinks_color:;
-    --snacks_color:;
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+    background-color: #f1f1f1;
+    opacity: 0.5;
+    text-align: center;
 }
 
-.beef { 
-    width:calc(25% - var(--boder_space));
-    height: auto;
-    margin-right: var(--boder_space);
-    background: #F69B88 ; 
-    float:left;
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    border: 1px;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 12px;
+    transition: 0.3s;
+    font-size: 24px;
     opacity: var(--var_opac);
 }
-.beef tr:nth-child(odd){background-color: #fba08d}
-.beef tr:nth-child(even){background-color: #f39885}
 
-.chicken { 
-    width:calc(25% - var(--boder_space)); 
-    height: auto;
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+    opacity: var(--var_opac);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+    opacity: var(--var_opac);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    height: 100%;
+    opacity: var(--var_opac);
+    /*width:calc(100% - var(--boder_space));
     margin-right: var(--boder_space);
+    margin-left: var(--boder_space);*/
+    height: auto;
+    align-content: center;
+    /*padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;*/
+}
+
+
+#beef { 
+    background: #F69B88 ;
+    display: block;
+}
+#beef tr:nth-child(odd){background-color: #fba08d}
+#beef tr:nth-child(even){background-color: #f39885}
+
+#chicken { 
     background: #F0D3A7 ; 
-    float:left; 
-    opacity: var(--var_opac);
 }
-.chicken tr:nth-child(odd){background-color: #f5d8ac}
-.chicken tr:nth-child(even){background-color: #eacea2}
+#chicken tr:nth-child(odd){background-color: #f5d8ac}
+#chicken tr:nth-child(even){background-color: #eacea2}
 
-.drinks { 
-    width:calc(25% - var(--boder_space)); 
-    height: auto;
-    margin-right: var(--boder_space);
+#drinks { 
     background: #aed6f1 ; 
-    float:left; 
-    opacity: var(--var_opac);
 }
-.drinks tr:nth-child(odd){background-color: #b3dbf6}
-.drinks tr:nth-child(even){background-color: #a9d0eb}
+#drinks tr:nth-child(odd){background-color: #b3dbf6}
+#drinks tr:nth-child(even){background-color: #a9d0eb}
 
-.snacks { 
-    width:25%; 
-    height: auto;
+#snacks { 
     background: #FAC5C4 ;
-    float:right;
-    opacity: var(--var_opac);
 }
-.snacks tr:nth-child(odd){background-color: #ffcac9}
-.snacks tr:nth-child(even){background-color: #f5c0bf}
+#snacks tr:nth-child(odd){background-color: #ffcac9}
+#snacks tr:nth-child(even){background-color: #f5c0bf}
 
 @media (max-width: 1080px) {
     /* CSS that should be displayed if width is equal to or less than 1080px goes here */
-    .beef { 
+    #beef { 
         width:calc(50% - var(--boder_space));
         height: auto;
         margin-right: var(--boder_space);
@@ -89,7 +121,7 @@ div {
         float:left;
         opacity: var(--var_opac);
     }
-    .chicken { 
+    #chicken { 
         width:calc(50% - var(--boder_space));
         height: auto;
         margin-right: 0px;
@@ -98,7 +130,7 @@ div {
         float:right; 
         opacity: var(--var_opac);
     }
-    .snacks { 
+    #snacks { 
         width:calc(50% - var(--boder_space)); 
         height: auto;
         /*margin-right: var(--boder_space);*/
@@ -106,7 +138,7 @@ div {
         float:left; 
         opacity: var(--var_opac);
     }
-    .drinks { 
+    #drinks { 
         width:calc(50% - var(--boder_space)); 
         height: auto;
         margin-right: - var(--boder_space);
@@ -119,12 +151,15 @@ div {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    width: 1200px;
     border: 0px solid #ddd;
+    margin: 0 auto;
 }
 
 th, td {
     border: none;
     text-align: left;
-    padding: 8px;
+    padding: 6px;
+    width: 1280px;
+    margin: 0 auto;
 }
