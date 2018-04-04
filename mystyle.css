@@ -2,10 +2,27 @@
 :root{
     --boder_space:1px;
     --var_opac:0.875;
-    --beef_color:;
-    --chicken_color:;
-    --drinks_color:;
-    --snacks_color:;
+    --content_width:1280px;
+    --beef_color:#F69B88;
+    --chicken_color:#F0D3A7;
+    --drinks_color:#aed6f1;
+    --snacks_color:#FAC5C4;
+}
+
+.beef { 
+    background: var(--beef_color);
+}
+
+.chicken { 
+    background: var(--chicken_color); ; 
+}
+
+.drinks { 
+    background: var(--drinks_color);
+}
+
+.snacks { 
+    background: var(--snacks_color);
 }
 
 h1{
@@ -84,31 +101,14 @@ div {
     border-top: none;*/
 }
 
-
 #beef { 
-    background: #F69B88 ;
     display: block;
 }
-#beef tr:nth-child(odd){background-color: #fba08d}
-#beef tr:nth-child(even){background-color: #f39885}
 
-#chicken { 
-    background: #F0D3A7 ; 
-}
-#chicken tr:nth-child(odd){background-color: #f5d8ac}
-#chicken tr:nth-child(even){background-color: #eacea2}
+tr:nth-child(odd){background-color: rgba(0,0,0,0.1)}
+tr:nth-child(even){background-color: rgba(255,255,255,0.1)}
 
-#drinks { 
-    background: #aed6f1 ; 
-}
-#drinks tr:nth-child(odd){background-color: #b3dbf6}
-#drinks tr:nth-child(even){background-color: #a9d0eb}
 
-#snacks { 
-    background: #FAC5C4 ;
-}
-#snacks tr:nth-child(odd){background-color: #ffcac9}
-#snacks tr:nth-child(even){background-color: #f5c0bf}
 
 @media (max-width: 1080px) {
     /* CSS that should be displayed if width is equal to or less than 1080px goes here */
