@@ -20,13 +20,22 @@
 
 <body class="pbody">
 		<div class="tab">
-				<button class="tablinks" onclick="openFood(event, 'beef')">Beef</button>
-				<button class="tablinks" onclick="openFood(event, 'chicken')">Chicken</button>
-				<button class="tablinks" onclick="openFood(event, 'drinks')">Drinks</button>
-				<button class="tablinks" onclick="openFood(event, 'snacks')">Snacks</button>
+				<button class="beef tablinks" onclick="openFood(event, 'beef')">Beef</button>
+				<button class="chicken tablinks" onclick="openFood(event, 'chicken')">Chicken</button>
+				<button class="drinks tablinks" onclick="openFood(event, 'drinks')">Drinks</button>
+				<button class="snacks tablinks" onclick="openFood(event, 'snacks')">Snacks</button>
 		</div>
+		<div class="dropdown">
+				<button class="dropbtn">Categories</button>
+				<div class="dropdown-content">
+				  <a class = "beef tablinks" onclick="openFood(event, 'beef')">Beef</a>
+				  <a class = "chicken tablinks" onclick="openFood(event, 'chicken')">Chicken</a>
+				  <a class = "drinks tablinks" onclick="openFood(event, 'drinks')">Drinks</a>
+				  <a class = "snacks tablinks" onclick="openFood(event, 'snacks')">Snacks</a>
+				</div>
+			  </div>
 		<div>
-				<div id="beef" class="tabcontent">
+				<div id="beef" class="beef tabcontent">
 						<table>
 							<tr><td><a href="https://gfycat.com/HeavenlyShoddyIguanodon">Beef and Brocolli Recipe</a></td></tr>
 							<tr><td><a href="https://i.imgur.com/IaB2hxl.gifv">Mediterranean Lamb burger</a></td></tr>
@@ -54,7 +63,7 @@
 							
 						</table>
 					</div>
-					<div id="chicken" class="tabcontent">
+					<div id="chicken" class="chicken tabcontent">
 						<table>
 							<tr><td><a href="https://i.imgur.com/IzaE33L.gifv">Chicken Fajita And Veggie Bake</a></td></tr>
 							<tr><td><a href="https://gfycat.com/DentalSlushyAmericancrayfish">Indian-Style Fried Chicken</a></ABBR></td></tr>
@@ -98,7 +107,7 @@
 						</table>
 					</div>
 					
-					<div id="snacks" class="tabcontent">
+					<div id="snacks" class="snacks tabcontent">
 						<table>
 							<tr><td><a href="https://gfycat.com/FineJampackedGrayling">Caribbean-Style Mango-Habanero Hot Sauce</a></td></tr>
 							<tr><td><a href="https://gfycat.com/SparseScornfulArcticfox">Pizza Bases 4 Ways</a></td></tr>
@@ -129,7 +138,7 @@
 						</table>
 					</div>
 		
-					<div id="drinks" class="tabcontent">
+					<div id="drinks" class="drinks tabcontent">
 						<table>
 							<tr><td><a href="https://gfycat.com/BravePopularArmyworm">8 Frozen or Fruity Sangrias</a></td></tr>
 							<tr><td><a href="http://i.imgur.com/vKiBTgn.gifv">Spiked Milkshakes Four Ways</a></td></tr>
