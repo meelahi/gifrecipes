@@ -39,7 +39,6 @@ h2{
 }
 
 div {
-    /*height: 100%;*/
     border: 0px;
     border-color: black;			
 }
@@ -51,22 +50,23 @@ div {
     background-position: center; 
     background-size: cover;
     width: 100%;
+    
 }
 
 /* Style the tab */
 .tab {
     overflow: hidden;
-    /*border: 1px solid #ccc;*/
-    background-color: #f1f1f1;
-    opacity: 0.5;
+    opacity: 0.9;
     text-align: center;
 }
+.dropdown {
+    display: none;
+}
+
 
 /* Style the buttons inside the tab */
 .tab button {
-    background-color: inherit;
-    border: 1px;
-    outline: none;
+    border: none;
     cursor: pointer;
     padding: 4px 12px;
     transition: 0.3s;
@@ -76,29 +76,33 @@ div {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
     opacity: var(--var_opac);
+    background-color: rgba(255,255,255,0.4);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: rgba(0,0,0,0.1);
     opacity: var(--var_opac);
+    border-left: 1px solid rgba(128,128,128,0.5);
+    border-right: 1px solid rgba(128,128,128,0.5);
+    border-top: 1px solid rgba(128,128,128,0.5);
+    border-bottom: none;
 }
 
 /* Style the tab content */
 .tabcontent {
     display: none;
     height: 100%;
+    width: 100%;
+    max-width: var(--content_width);
     opacity: var(--var_opac);
-    /*width:calc(100% - var(--boder_space));
-    margin-right: var(--boder_space);
-    margin-left: var(--boder_space);*/
     height: auto;
     align-content: center;
-    /*padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;*/
+    border-left: 1px solid rgba(128,128,128,0.8);
+    border-right: 1px solid rgba(128,128,128,0.8);
+    border-bottom: 1px solid rgba(128,128,128,0.8);
+    margin: 0 auto;
 }
 
 #beef { 
@@ -108,43 +112,66 @@ div {
 tr:nth-child(odd){background-color: rgba(0,0,0,0.1)}
 tr:nth-child(even){background-color: rgba(255,255,255,0.1)}
 
+@media (max-width: 600px) {
+    .tab{
+        display: none;
+    }
 
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
 
-@media (max-width: 1080px) {
-    /* CSS that should be displayed if width is equal to or less than 1080px goes here */
-    #beef { 
-        width:calc(50% - var(--boder_space));
-        height: auto;
-        margin-right: var(--boder_space);
-        margin-bottom: var(--boder_space);
-        background: #F69B88 ; 
-        float:left;
-        opacity: var(--var_opac);
+    .dropbtn {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
     }
-    #chicken { 
-        width:calc(50% - var(--boder_space));
-        height: auto;
-        margin-right: 0px;
-        margin-bottom: var(--boder_space);
-        background: #F0D3A7 ; 
-        float:right; 
-        opacity: var(--var_opac);
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        width: 100%;
     }
-    #snacks { 
-        width:calc(50% - var(--boder_space)); 
-        height: auto;
-        /*margin-right: var(--boder_space);*/
-        background:  #FAC5C4 ; 
-        float:left; 
-        opacity: var(--var_opac);
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
     }
-    #drinks { 
-        width:calc(50% - var(--boder_space)); 
-        height: auto;
-        margin-right: - var(--boder_space);
-        background: #aed6f1;
-        float:right;
-        opacity: var(--var_opac);
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+    
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 0px solid #ddd;
+        margin: 0 auto;
+    }
+
+    th, td {
+        border: none;
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -162,4 +189,10 @@ th, td {
     padding: 6px;
     width: 1280px;
     margin: 0 auto;
+}
+
+td a{
+    padding-left: 6px;
+    text-decoration: none;
+    text-decoration-color: black;
 }

@@ -1,6 +1,3 @@
-var color="#2E2E2E";
-var border_space="3px";
-
 function openFood(evt, foodCategory) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
