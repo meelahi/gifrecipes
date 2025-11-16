@@ -10,15 +10,13 @@
 
 h1 {
     text-align: center;
-    color: black;
+    color: rgba(28, 28, 28, 0.8);
     font-size: 36px;
-    font-family: 'Pacifico', cursive;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 28px;
-    display: none;
+    font-family: "Stack Sans Notch", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    margin: 5px 0 10px 0;
 }
 
 div {
@@ -31,7 +29,14 @@ div {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    /*width: 100%;*/
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.maincontent{
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px rgba(128, 128, 128, 0.2);
 }
 
 /* Table styles */
@@ -47,7 +52,6 @@ th, td {
     border: none;
     text-align: left;
     padding: 6px;
-    width: 1280px;
     margin: 0 auto;
 }
 
@@ -58,6 +62,7 @@ th, td {
     opacity: 0.5;
     text-align: center;
     align-content: center;
+    margin-bottom: 0.5px;
 }
 
 /* Buttons inside the tab */
@@ -68,7 +73,7 @@ th, td {
     cursor: pointer;
     padding: 4px 12px;
     transition: 0.3s;
-    font-size: 24px;
+    font-size: 22px;
     opacity: var(--var_opac);
 }
 
@@ -137,13 +142,24 @@ th, td {
 /* Responsive layout */
 @media (max-width: 1280px) {
     .pbody{
-        /*width: calc(50% - var(--boder_space));*/
+        width: 100%;
+        margin: 0 auto;
     }
+    .maincontent{
+        border-radius: 5px 5px 0 0;
+        margin: 0 1px 0;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 5px 0 5px 0;
+    }
+
     table {
         border-collapse: collapse;
         border-spacing: 0;
         width: 100%;
-        margin: 0 auto;
+        margin: 5px;
         align-content: center;
     }
 
@@ -151,31 +167,24 @@ th, td {
         border: none;
         text-align: left;
         padding: 5px;
-        /*width: 1280px;*/
         margin: 0 auto;
     }
 
     #beef {
         height: auto;
-        margin-right: var(--boder_space);
-        margin-bottom: var(--boder_space);
         background: var(--beef_color);
-        /*float: left;*/
         opacity: var(--var_opac);
     }
 
     #chicken {
         height: auto;
-        margin-bottom: var(--boder_space);
         background: var(--chicken_color);
-        /*float: right;*/
         opacity: var(--var_opac);
     }
 
     #snacks {
         height: auto;
         background: var(--snacks_color);
-        /*float: left;*/
         opacity: var(--var_opac);
     }
 
