@@ -10,15 +10,13 @@
 
 h1 {
     text-align: center;
-    color: black;
+    color: rgba(28, 28, 28, 0.8);
     font-size: 36px;
-    font-family: 'Pacifico', cursive;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 28px;
-    display: none;
+    font-family: "Stack Sans Notch", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    margin: 5px 0 10px 0;
 }
 
 div {
@@ -139,6 +137,12 @@ th, td {
     .pbody{
         /*width: calc(50% - var(--boder_space));*/
     }
+
+    h1 {
+        font-size: 32px;
+        margin: 5px 0 5px 0;
+    }
+
     table {
         border-collapse: collapse;
         border-spacing: 0;
