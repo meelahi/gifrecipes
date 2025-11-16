@@ -1,0 +1,187 @@
+/* Variables used in many places */
+:root {
+    --boder_space: 1px;
+    --var_opac: 0.875;
+    --beef_color: #F69B88;
+    --chicken_color: #F0D3A7;
+    --drinks_color: #aed6f1;
+    --snacks_color: #FAC5C4;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    font-family: 'Pacifico', cursive;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 28px;
+    display: none;
+}
+
+div {
+    border: 0 solid black;
+}
+
+.pbody {
+    font-family: 'Source Serif Pro', serif;
+    background-image: url("bcg (3).jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /*width: 100%;*/
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 1200px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 6px;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* Tabs container */
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    opacity: 0.5;
+    text-align: center;
+    align-content: center;
+}
+
+/* Buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 12px;
+    transition: 0.3s;
+    font-size: 24px;
+    opacity: var(--var_opac);
+}
+
+/* Hover effect */
+.tab button:hover {
+    background-color: #ddd;
+    opacity: var(--var_opac);
+}
+
+/* Active tab */
+.tab button.active {
+    background-color: #ccc;
+    opacity: var(--var_opac);
+}
+
+/* Tab content */
+.tabcontent {
+    display: none;
+    opacity: var(--var_opac);
+    height: auto;
+    align-content: center;
+}
+
+/* Section colors */
+#beef {
+    background: var(--beef_color);
+    display: block;
+    tr:nth-child(odd) {
+        background-color: color-mix(in srgb, var(--beef_color) 95%, white 5%);
+    }
+    tr:nth-child(even) {
+        background-color: color-mix(in srgb, var(--beef_color) 95%, black 5%);
+    }
+}
+
+#chicken {
+    background: var(--chicken_color);
+    tr:nth-child(odd) {
+        background-color: color-mix(in srgb, var(--chicken_color) 95%, white 5%);
+    }
+    tr:nth-child(even) {
+        background-color: color-mix(in srgb, var(--chicken_color) 95%, black 5%);
+    }
+}
+
+#drinks {
+    background: var(--drinks_color);
+    tr:nth-child(odd) {
+        background-color: color-mix(in srgb, var(--drinks_color) 95%, white 5%);
+    }
+    tr:nth-child(even) {
+        background-color: color-mix(in srgb, var(--drinks_color) 95%, black 5%);
+    }
+}
+
+#snacks {
+    background: var(--snacks_color);
+    tr:nth-child(odd) {
+        background-color: color-mix(in srgb, var(--snacks_color) 95%, white 5%);
+    }
+    tr:nth-child(even) {
+        background-color: color-mix(in srgb, var(--snacks_color) 95%, black 5%);
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 1280px) {
+    .pbody{
+        /*width: calc(50% - var(--boder_space));*/
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        margin: 0 auto;
+        align-content: center;
+    }
+
+    th, td {
+        border: none;
+        text-align: left;
+        padding: 5px;
+        /*width: 1280px;*/
+        margin: 0 auto;
+    }
+
+    #beef {
+        height: auto;
+        margin-right: var(--boder_space);
+        margin-bottom: var(--boder_space);
+        background: var(--beef_color);
+        /*float: left;*/
+        opacity: var(--var_opac);
+    }
+
+    #chicken {
+        height: auto;
+        margin-bottom: var(--boder_space);
+        background: var(--chicken_color);
+        /*float: right;*/
+        opacity: var(--var_opac);
+    }
+
+    #snacks {
+        height: auto;
+        background: var(--snacks_color);
+        /*float: left;*/
+        opacity: var(--var_opac);
+    }
+
+    #drinks {
+        height: auto;
+        background: var(--drinks_color);
+        opacity: var(--var_opac);
+    }
+}
